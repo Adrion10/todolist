@@ -12,5 +12,8 @@ export class AppComponent {
     this.list.push({ id: this.list.length, name: item });
     console.warn(this.list);
   }
-  removeTask(id: number) {}
+  removeTask(id: number) {
+    console.log(id);
+    this.list = this.list.filter((item) => item.id !== id);
+  }
 }
